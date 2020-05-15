@@ -1,0 +1,10 @@
+.user__photo {
+ min-width: 3.125rem;
+  min-height: 3.125rem;
+  max-width: 3.125rem;
+  max-height: 3.125rem;
+  // margin-right: $s-unit;
+  // background-color: $text-label-style;
+  border-radius: 50%;
+  object-fit: cover;
+}
