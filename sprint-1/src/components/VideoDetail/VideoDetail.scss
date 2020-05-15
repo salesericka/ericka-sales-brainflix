@@ -1,0 +1,13 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.video-detail{
+   @include mobile-padding-side;
+      @include tablet {
+         @include tablet-padding-side;
+      }
+
+      @include desktop {
+         @include desktop-padding-one-side;
+      }
+}

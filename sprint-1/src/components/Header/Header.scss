@@ -1,6 +1,17 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
 .hdr__nav-bar {
- display:flex;
- flex-wrap:wrap;
- justify-content: center;
- padding: 0.5rem;
+   @include flex-column;
+   align-items: center;
+   margin-top:$s-unit;   
+   padding: 0 $s-unit 0 $s-unit;      
+   @include tablet{
+      @include tablet-padding-side;
+      @include flex-between;
+      flex-direction: row;
+   }
+   @include desktop {
+      @include desktop-padding-side;
+   }
 }

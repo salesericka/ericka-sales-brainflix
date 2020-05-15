@@ -1,0 +1,17 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.video-detail__box{
+   @include tablet{
+      @include flex-between;
+      flex-wrap: wrap;
+      align-items: baseline;
+   }
+}
+.video-detail__title{
+   width:100%;
+}
+
+.video-detail__info{
+   display:flex;
+}

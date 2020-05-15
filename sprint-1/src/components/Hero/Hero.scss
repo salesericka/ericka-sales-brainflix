@@ -1,0 +1,40 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.hero{
+   margin-top: $s-unit;
+   background-color: $primary-color;
+   @include mobile-padding-side;
+   @include tablet {
+      @include tablet-padding-side;
+   }
+   @include desktop {
+      @include desktop-padding-side;
+   }
+
+   &__video-setting{
+      padding-bottom:$s-unit;
+      @include flex-between;
+      flex-direction: row;
+   }
+
+   &__video-btn-play {
+      flex-grow: 1;
+      max-width: 3.125rem;
+      @include video-setting-format;
+   }
+
+   &__video-progress{
+      flex-grow: 3;
+      margin: 0 $s-unit;
+      @include video-setting-format;
+
+   }
+
+   &__video-box {
+      display:flex;
+      flex-grow: 2;
+      max-width: 6.125rem;
+      @include video-setting-format;
+   }
+}

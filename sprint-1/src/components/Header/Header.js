@@ -3,8 +3,6 @@ import './Header.scss';
 import Logo from '../Logo/Logo';
 import Nav from '../Nav/Nav';
 
-
-
 class Header extends Component {
  render(){
    return ( 

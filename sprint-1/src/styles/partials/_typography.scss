@@ -1,0 +1,19 @@
+@import "_mixins";
+
+// Fonts
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/global-font/avenir-next-pro-lt/Linotype-AvenirNextLTPro-Regular.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "AvenirDemiBold";
+  src: url("../../assets/global-font/avenir-next-pro-lt/Linotype-AvenirNextLTPro-Demi.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "AvenirBold";
+  src: url("../../assets/global-font/avenir-next-pro-lt/Linotype-AvenirNextLTPro-Bold.otf")
+    format("opentype");
+}

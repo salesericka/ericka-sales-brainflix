@@ -1,0 +1,156 @@
+@import "_variables";
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+}
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin background-center {
+  background-position: center;
+  background-size: cover;
+}
+// Padding Formats
+@mixin mobile-padding-side {
+  padding: 0 $s-unit;
+}
+@mixin tablet-padding-side {
+  padding: 0 $m-unit;
+}
+@mixin desktop-padding-side {
+  padding: 0 6.875rem;
+}
+
+@mixin desktop-padding-one-side {
+  padding-left: 6.875rem;
+}
+@mixin about-desktop-padding {
+  padding: 0 5rem;
+}
+
+// Text Formats
+@mixin mobile-header-text {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+@mixin mobile-subheader-text {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+@mixin mobile-p-text {
+  font-size: 0.812rem;
+  line-height: 1.125rem;
+}
+
+@mixin hh-text {
+  font-size: 3.75rem;
+  line-height: 4.25rem;
+}
+@mixin h1-text {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+}
+@mixin h2-text {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+@mixin h3-text {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+@mixin h4-text {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+@mixin h5-text {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
+
+// Photo/Gallery Formats
+
+@mixin about-photo-format {
+  width: 100%;
+  height: 47vw;
+  object-fit: cover;
+  margin-top: $m-unit;
+  max-width: 56rem;
+  max-height: 28.125rem;
+}
+
+@mixin gallery-format {
+  max-width:18rem;
+  max-height: 10.125rem;
+  margin-bottom: $s-unit;
+  filter: grayscale(100%);
+  @include tablet {
+    margin: 1vw 1vw;
+    max-width: 18rem;
+    max-height: 7.875rem;
+  }
+  @include desktop {
+    margin:0.5vw ;
+    max-width: 21.5rem;
+    max-height: 12.0625rem;
+  }
+}
+
+@mixin user-photo-format {
+  min-width: 3.125rem;
+  min-height: 3.125rem;
+  max-width: 3.125rem;
+  max-height: 3.125rem;
+  margin-right: $s-unit;
+  background-color: $text-label-style;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@mixin button-format {
+  box-sizing: border-box;
+  width:75%;
+  margin-top: $s-unit;
+  background-color: $brainflix-blue;
+  border-radius: 0.375rem;
+  padding: $s-unit 0;
+  &:hover {
+      background-color: $other-brainflix-blue;
+  }
+}
+
+@mixin form-format {
+  padding: $s-unit;
+  width:100%;
+  border: 1px solid $text-field-border ;
+  border-radius: 0.25rem;
+  &:focus {
+      border: 0.125rem solid black ;
+  }
+}
+
+@mixin video-setting-format {
+  height:10vw;
+  max-height:2.125rem;
+  border-radius: 0.375rem;
+  background-color: rgba(0, 0, 0, 0.37) ;
+}
