@@ -6,12 +6,17 @@
 .btn {
    font-family: "AvenirBold";
    color:$light-text;
+   justify-content: center;
+   align-items: center;
    @include button-format;
    @include mobile-subheader-text;
    text-transform: uppercase;
    @include tablet {
       margin: 0 $s-unit 0 0;
-      padding: 0.70rem $s-unit;
+      padding: 0.78rem $s-unit;
       max-height: 3.125rem;
+   }
+   &__img {
+      padding-right:$s-unit;
    }
 }

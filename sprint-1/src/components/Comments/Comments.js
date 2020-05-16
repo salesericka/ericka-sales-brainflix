@@ -1,20 +1,23 @@
 import React from 'react';
-import commentsDefault from '../commentsDefault'
 import UserPhoto from '../UserPhoto/UserPhoto';
+import './Comments.scss';
 
-function Comments (){
+function Comments (props){
+
+   // console.log(props)
+
    return(
       <li className="comment__item">
          <UserPhoto/>
          <div className="comment__item-box">
             <h4 className="comment__item-user">
-               //Name of user
+               {props.name}
             </h4>
             <span className="comment__item-date">
-            date
+            {props.date}
             </span>
             <p className="comment__item-comment">
-            comment of user
+            {props.comment}
             </p>
          </div>
       </li>

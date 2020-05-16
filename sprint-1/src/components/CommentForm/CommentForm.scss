@@ -1,0 +1,47 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/typography";
+
+.form__container{
+   @include mobile-padding-side;
+   @include tablet {
+      @include tablet-padding-side;
+   }
+   @include desktop{
+      @include desktop-padding-one-side;
+   }
+}
+.comment {
+   @include flex-between;
+   flex-direction:row;
+   padding-bottom:$s-unit;
+   border-bottom: 1px solid $text-field-border;
+   @include tablet {
+      justify-content: flex-start;
+      align-items: center;
+   }
+   
+   &__input{
+      margin-left: $m-unit;
+      @include tablet {
+         box-sizing: border-box;
+         @include flex-between;
+         align-items: center;
+      }
+   }
+   &__label {
+      @include tablet {
+         justify-self:row;
+         // display:none;
+      }
+   }
+   &__input-box {
+      box-sizing: border-box;
+      margin-top:0.3125rem;
+      @include form-format;
+      word-wrap: break-word;
+      resize: none;
+      overflow:auto;
+
+   }
+}

@@ -1,16 +1,18 @@
 import React from 'react';
-import videos from '../videos';
 
-function VideoProfile(){
+function VideoProfile (props){
+   
+   // console.log(props)
+
    return(
       <li className="video__item">
-         <img className ="video__pic"/>
+         <img className ="video__pic" src= {props.image}/>
          <div className="video__detail-box">
             <h4 className="video__item-tile">
-               //Video Title Goes Here
+               {props.title}
             </h4>
             <p className="video__item-channel">
-               //Channel Name Goes Here
+               {props.channel}
             </p>
          </div>
       </li>

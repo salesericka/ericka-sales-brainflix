@@ -1,21 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Main.scss';
-import VideoDetail from '../VideoDetail/VideoDetail';
-import CommentForm from '../CommentForm/CommentForm';
-import Comments from '../Comments/Comments';
 import VideoList from '../VideoList/VideoList';
+import MainVideo from '../MainVideo/MainVideo';
 
-class Main extends Component {
+class Main extends React.Component {
  render(){
-   return ( 
-    <article>
-      <VideoDetail />
-      <CommentForm/>
-      <ul className="comment__list">
-        <Comments />
-      </ul>
+   return (
+    <>
+      <MainVideo/>
       <VideoList/>
-    </article>
+    </>
    );
  }
 }

@@ -2,9 +2,12 @@
 @import "../../styles/partials/variables";
 
 .hero{
+   box-sizing: border-box;
    margin-top: $s-unit;
+   width:100%;
+   @include flex-center;
+   align-items: center;
    background-color: $primary-color;
-   @include mobile-padding-side;
    @include tablet {
       @include tablet-padding-side;
    }
@@ -12,9 +15,23 @@
       @include desktop-padding-side;
    }
 
+   &__video{      
+      position: relative;
+      width:100%;
+      @include tablet {
+         max-width: 43.75rem;
+      }
+      @include desktop{
+         max-width: 59rem;
+      }
+   }
+
    &__video-setting{
-      padding-bottom:$s-unit;
       @include flex-between;
+      box-sizing: border-box;
+      // position: absolute;
+      width:100%;
+      padding:0 $s-unit 5px $s-unit;
       flex-direction: row;
    }
 
@@ -22,19 +39,25 @@
       flex-grow: 1;
       max-width: 3.125rem;
       @include video-setting-format;
+      @include flex-center;
+      align-items: center;
    }
 
    &__video-progress{
       flex-grow: 3;
       margin: 0 $s-unit;
       @include video-setting-format;
+      @include flex-center;
+      align-items: center;
 
    }
 
    &__video-box {
       display:flex;
+      justify-content: space-evenly;
       flex-grow: 2;
       max-width: 6.125rem;
       @include video-setting-format;
+      align-items: center;
    }
 }

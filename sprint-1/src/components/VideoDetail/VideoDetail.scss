@@ -1,6 +1,7 @@
 @import "../../styles/partials/mixins";
 @import "../../styles/partials/variables";
 
+
 .video-detail{
    @include mobile-padding-side;
       @include tablet {
@@ -10,4 +11,38 @@
       @include desktop {
          @include desktop-padding-one-side;
       }
+
+   &__box{
+      @include tablet{
+         @include flex-between;
+         flex-wrap: wrap;
+         align-items: baseline;
+         @include desktop {
+            border-bottom: 1px solid $text-field-border;
+         }
+      }
+   }
+
+   &__title {
+      width:100%;
+   }
+
+   &__date {
+      padding-left: 0.3rem;      
+   }
+
+   &__info {
+      display:flex;
+   }
+
+   &__views{
+      margin-right:$m-unit;
+   }
+   &__icon {
+      margin-right: 0.5rem;
+   }
+
+   &__bio {
+      max-width: 30.9375rem;
+   }
 }

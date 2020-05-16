@@ -7,11 +7,22 @@
       flex-wrap: wrap;
       align-items: baseline;
    }
-}
-.video-detail__title{
-   width:100%;
+
+   &__title {
+      width:100%;
+   }
+
+   &__info {
+      display:flex;
+   }
 }
 
-.video-detail__info{
-   display:flex;
+.comment__list {
+   @include mobile-padding-side;
+      @include tablet{
+         @include tablet-padding-side;
+      }
+      @include desktop{
+         @include desktop-padding-one-side;
+      }
 }

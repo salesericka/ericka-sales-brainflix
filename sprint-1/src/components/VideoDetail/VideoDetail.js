@@ -1,19 +1,37 @@
-import React, { Component } from 'react';
-import MainVideo from '../MainVideo/MainVideo'
+import React from 'react';
 import './VideoDetail.scss';
+import viewsIcon from '../../assets/icons/svg/Icon-views.svg';
+import likesIcon from '../../assets/icons/svg/Icon-likes.svg';
+function VideosDetail (props) {
 
-class VideosDetail extends Component {
-
- render(){
-  return(
+// console.log(props)
+  
+   return(  
    <section className="video-detail">
-    <MainVideo/>
-    <p className="video-detail__bio">
-     On a gusty day in Southern Utah, a group of 25 daring mountain bikers blew the doors off what is possible on two wheels, unleashing some of the biggest moments the sport has ever seen. While mother nature only allowed for one full run before the conditions made it impossible to ride, that was all that was needed for event veteran Kyle Strait, who won the event for the second time -- eight years after his first Red Cow Rampage title
-    </p>
+      <div className="video-detail__box">
+         <h1 className="video-detail__title">
+            {props.title}
+         </h1>
+         <h4 className="video-detail__channel">
+            By {props.channel}
+            <span className="video-detail__date">
+            {props.date}
+            </span>
+         </h4>
+         <div className="video-detail__info">
+            <div className="video-detail__views">
+               <img src={viewsIcon} alt="Views Icon" className="video-detail__icon"/> {props.views}
+            </div>
+            <div className="video-detail__likes">
+               <img src={likesIcon} alt="Likes Icon" className="video-detail__icon"/> {props.likes}
+            </div>
+         </div>
+      </div>
+      <p className="video-detail__bio">
+         {props.description}
+      </p>
    </section>
   );
- }
 }
 
 export default VideosDetail;

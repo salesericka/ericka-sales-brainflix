@@ -3,8 +3,12 @@ import './Button.scss';
 
 
 function Button (props){
+   console.log(props)
  return(
- <button className="btn">{props.button}</button>
+ <button className="btn">
+   <img src={props.img} className="btn__img"/>
+   {props.button}
+   </button>
  )
 }
 

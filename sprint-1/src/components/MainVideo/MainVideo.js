@@ -1,30 +1,49 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './MainVideo.scss';
+import HeroVideo from '../HeroVideo/HeroVideo';
+import VideoDetail from '../VideoDetail/VideoDetail';
+import CommentForm from '../CommentForm/CommentForm';
+import Comments from '../Comments/Comments';
+import videos from '../videos';
 
-function MainVideo(props){
-   return(
-   <div className="video-detail__box">
-      <h1 className="video-detail__title">
-         ///TITLE OF VIDEO GOIES HERE
-      </h1>
-      <h4 className="video-detail__channel">
-         By //CHANNELL
-         <span className="video-detail__date">
-         //video date goes here
-         </span>
-      </h4>
+class MainVideo extends React.Component{
+   state = {
+      videos:videos[0]
+    }
 
-      <div className="video-detail__info">
-         <div className="vide-detail__views">
-            //Icon and Views
-         </div>
-         <div className="video-detail__likes">
-            //Icon and Likes
-         </div>
-      </div>
+   render(){
+      return(<article>
+         <HeroVideo 
+         image={this.state.videos.image}
+         />
 
-   </div>
-   );
+         <VideoDetail 
+         title={this.state.videos.title}
+         channel={this.state.videos.channel}
+         date={this.state.videos.timestamp}
+         views={this.state.videos.views}
+         likes={this.state.videos.likes}
+         description={this.state.videos.description}
+         />
+
+         <CommentForm />
+
+         <ul className="comment__list">
+
+            {this.state.videos.comments.map(comments=>{
+               return <Comments
+               key={comments.id}
+               name={comments.name}
+               date={comments.date}
+               comment={comments.comment}
+                />
+            })}
+
+         </ul>
+
+      </article>
+      )
+   }
 }
 
 export default MainVideo;
