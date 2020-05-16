@@ -1,14 +1,16 @@
 import React from 'react';
-
+import './VideoProfile.scss';
 function VideoProfile (props){
    
    // console.log(props)
 
    return(
       <li className="video__item">
-         <img className ="video__pic" src= {props.image}/>
-         <div className="video__detail-box">
-            <h4 className="video__item-tile">
+         <div className="video__item-box-pic">
+            <img className ="video__item-pic" src={props.image}/>
+         </div>
+         <div className="video__item-box">
+            <h4 className="video__item-title">
                {props.title}
             </h4>
             <p className="video__item-channel">

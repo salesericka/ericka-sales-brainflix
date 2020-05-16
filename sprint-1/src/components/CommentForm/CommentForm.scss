@@ -23,25 +23,23 @@
    
    &__input{
       margin-left: $m-unit;
+      width:100%;
       @include tablet {
-         box-sizing: border-box;
          @include flex-between;
          align-items: center;
       }
    }
+
    &__label {
       @include tablet {
          justify-self:row;
-         // display:none;
       }
    }
    &__input-box {
       box-sizing: border-box;
       margin-top:0.3125rem;
       @include form-format;
-      word-wrap: break-word;
-      resize: none;
-      overflow:auto;
-
+      resize: inherit;
+      object-fit: contain;
    }
 }

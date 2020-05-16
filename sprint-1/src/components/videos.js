@@ -21,7 +21,7 @@ let videos =[
   likes: "110,985",
   duration: " ",
   video: " ",
-  timestamp: 1545169096,
+  timestamp: "12/182018",
   comments: commentsDefault,
 
  },

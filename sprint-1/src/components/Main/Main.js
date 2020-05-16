@@ -4,14 +4,14 @@ import VideoList from '../VideoList/VideoList';
 import MainVideo from '../MainVideo/MainVideo';
 
 class Main extends React.Component {
- render(){
-   return (
+  render(){
+    return (
     <>
       <MainVideo/>
       <VideoList/>
     </>
-   );
- }
+   )
+  }
 }
 
 export default Main;

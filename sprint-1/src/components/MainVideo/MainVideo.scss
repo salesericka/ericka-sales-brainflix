@@ -18,6 +18,7 @@
 }
 
 .comment__list {
+   margin-top:0;
    @include mobile-padding-side;
       @include tablet{
          @include tablet-padding-side;

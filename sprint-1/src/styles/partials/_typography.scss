@@ -4,16 +4,49 @@
 
 @font-face {
   font-family: "Avenir";
-  src: url("../../assets/global-font/avenir-next-pro-lt/Linotype-AvenirNextLTPro-Regular.otf")
-    format("opentype");
+  src: url("../../assets/global-font/avenir-next-pro-lt/alternative-files/Linotype-AvenirNextLTPro.ttf")
+    format("truetype");
 }
 @font-face {
   font-family: "AvenirDemiBold";
-  src: url("../../assets/global-font/avenir-next-pro-lt/Linotype-AvenirNextLTPro-Demi.otf")
-    format("opentype");
+  src: url("../../assets/global-font/avenir-next-pro-lt/alternative-files/Linotype-AvenirNextLTProDemi.ttf")
+    format("truetype");
 }
 @font-face {
   font-family: "AvenirBold";
-  src: url("../../assets/global-font/avenir-next-pro-lt/Linotype-AvenirNextLTPro-Bold.otf")
-    format("opentype");
+  src: url('../../assets/global-font/avenir-next-pro-lt/alternative-files/Linotype-AvenirNextLTProBold.ttf')
+    format("truetype");
+}
+
+
+.comment__label,
+.video__list-title {
+  font-family: "AvenirDemiBold";
+  color: $text-label-style;
+  text-transform: uppercase;
+  @include h4-text;
+}
+
+.comment__item-user,
+.video__item-title{
+  font-family: "AvenirBold";
+  color: $primary-color;
+  @include h4-text;
+}
+
+.comment__item-date,
+.video-detail__date{
+  font-family: "Avenir";
+  color: $text-label-style;
+  text-transform: uppercase;
+  @include h4-text;
+}
+
+.comment__item-comment,
+.video__item-channel {
+  color: $primary-color;
+  @include mobile-p-text;
+  @include tablet {
+    @include h4-text;
+  }
 }

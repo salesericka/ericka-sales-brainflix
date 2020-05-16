@@ -4,14 +4,16 @@ import viewsIcon from '../../assets/icons/svg/Icon-views.svg';
 import likesIcon from '../../assets/icons/svg/Icon-likes.svg';
 function VideosDetail (props) {
 
-// console.log(props)
+console.log((props.title))
   
    return(  
    <section className="video-detail">
       <div className="video-detail__box">
+
          <h1 className="video-detail__title">
             {props.title}
          </h1>
+
          <h4 className="video-detail__channel">
             By {props.channel}
             <span className="video-detail__date">

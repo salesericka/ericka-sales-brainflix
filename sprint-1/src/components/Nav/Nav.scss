@@ -14,15 +14,19 @@
    }
 
    &__box{
-      @include flex-between;
-      align-items: flex-end;
+      margin-top:$s-unit;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
       @include tablet {
+         margin-top:0;
          align-items: center;
       }
    }
 
-   &__photo-box{
-      margin-left:$s-unit;
+   &__box-btn{
+      margin-right:$s-unit;
+      width:100%;
    }
 }
 

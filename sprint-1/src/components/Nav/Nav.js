@@ -12,17 +12,19 @@ class Nav extends React.Component {
          <input type="search" className="nav-bar__search-box" name="search" placeholder="Search">
          </input>
          <div className="nav-bar__box">
-            <Button
-            img={uploadIcon}
-            button='Upload'/>
-            <div className="nav-bar__photo-box">
-            <UserPhoto src={profilePhoto}/>
+            <div className="nav-bar__box-btn">
+               <Button 
+               button='Upload'
+               img={uploadIcon}/>
             </div>
+            <UserPhoto src={profilePhoto}/>
          </div>
       </form>
       )
    }
 }
+
+// img={uploadIcon}
 
 
 

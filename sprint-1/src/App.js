@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import Header from './components/Header/Header';
 import  Main from './components/Main/Main';
+import videos from './components/videos'
 
 class App extends Component {
-  render(){
+    state={
+      videos:videos
+    }
+    render(){
     return ( 
       <div className="App">
         <Header/>

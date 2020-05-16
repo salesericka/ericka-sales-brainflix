@@ -1,6 +1,6 @@
 @import "../../styles/partials/mixins";
 @import "../../styles/partials/variables";
-@import "../../styles/partials/typography";
+@import '../../styles/partials/typography';
 
 
 .btn {
@@ -15,6 +15,7 @@
       margin: 0 $s-unit 0 0;
       padding: 0.78rem $s-unit;
       max-height: 3.125rem;
+      max-width:160px;
    }
    &__img {
       padding-right:$s-unit;

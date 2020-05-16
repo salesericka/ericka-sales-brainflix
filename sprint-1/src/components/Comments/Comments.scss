@@ -2,3 +2,27 @@
 @import "../../styles/partials/variables";
 @import "../../styles/partials/typography";
 
+.comment__item  {
+   margin-top:$s-unit;
+   list-style-type: none;
+   display:flex;
+   align-items: flex-start;
+   border-bottom: 1px solid $text-field-border;
+
+   &-box {
+      margin-left: $s-unit;
+      @include flex-between;
+      flex-wrap: wrap;
+      @include tablet {
+        justify-content: flex-start;
+      }
+   }
+
+   &-date{
+   }
+
+   &-user{
+      margin-top:0;
+      width:max-content;
+   }
+}

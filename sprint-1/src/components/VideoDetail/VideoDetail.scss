@@ -1,5 +1,6 @@
 @import "../../styles/partials/mixins";
 @import "../../styles/partials/variables";
+@import "../../styles/partials/typography";
 
 
 .video-detail{
@@ -24,7 +25,10 @@
    }
 
    &__title {
+      margin-top:$l-unit;
+      @include mobile-header-text;
       width:100%;
+      font-family: "AvenirBold";
    }
 
    &__date {
@@ -33,6 +37,7 @@
 
    &__info {
       display:flex;
+      align-items: flex-end;
    }
 
    &__views{

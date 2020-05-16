@@ -1,0 +1,19 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/typography";
+
+.video {
+   @include mobile-padding-side;
+
+   @include tablet{
+      @include tablet-padding-side;
+   }
+
+   &__list-title {
+      margin: $l-unit 0;
+   }
+
+   &__list {
+      padding:0;
+   }
+}
