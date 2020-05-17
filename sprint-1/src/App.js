@@ -6,12 +6,10 @@ import VideoList from './components/VideoList/VideoList';
 import './App.scss';
 
 class App extends Component {
-
     state={
       mainVideos:videos[0],
       listVideos:videos
     }
-    
     render(){
     return ( 
       <div className="App">

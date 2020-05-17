@@ -6,7 +6,7 @@ function Button (props){
   //  console.log(props)
  return(
  <button className="btn">
-   <img src={props.img} className="btn__img"/>
+   <img src={props.img} className="btn__img" alt=""/>
    {props.button}
    </button>
  )

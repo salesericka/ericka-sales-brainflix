@@ -4,7 +4,7 @@ import viewsIcon from '../../assets/icons/svg/Icon-views.svg';
 import likesIcon from '../../assets/icons/svg/Icon-likes.svg';
 function VideosDetail (props) {
    
-console.log((props.title))
+// console.log((props.title))
   
    return(  
    <section className="video-detail">

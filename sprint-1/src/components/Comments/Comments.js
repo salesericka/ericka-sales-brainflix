@@ -4,7 +4,7 @@ import './Comments.scss';
 
 function Comments (props){
 
-   console.log(props)
+   // console.log(props)
 
    return(
       <li className="comment__item">

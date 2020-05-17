@@ -4,7 +4,7 @@ import VideoProfile from '../VideoProfile/VideoProfile'
 
 function VideoList (props) {
 
-   console.log(props.listVideos)
+   // console.log(props.listVideos)
 
    return(
       <aside className="video">

@@ -7,7 +7,7 @@ import Comments from '../Comments/Comments';
 class MainVideo extends React.Component{
    render(){
 
-      console.log(this.props.comment)
+      // console.log(this.props.comment)
       
       return(<>
          <HeroVideo 
