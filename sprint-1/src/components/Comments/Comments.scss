@@ -3,7 +3,7 @@
 @import "../../styles/partials/typography";
 
 .comment__item  {
-   margin-top:$s-unit;
+   padding:$s-unit 0;
    list-style-type: none;
    display:flex;
    align-items: flex-start;
@@ -11,18 +11,28 @@
 
    &-box {
       margin-left: $s-unit;
-      @include flex-between;
-      flex-wrap: wrap;
       @include tablet {
         justify-content: flex-start;
       }
    }
 
    &-date{
+      margin-left:$s-unit;
    }
 
    &-user{
-      margin-top:0;
-      width:max-content;
+      @include flex-between;
+      margin:0;
+      width:100%;
+      @include tablet{
+         justify-content: flex-start;
+      }
+   }
+   &-comment {
+      margin-top:8px;
+      max-width:624px;
+      @include desktop{
+         margin-right:$s-unit;
+      }
    }
 }

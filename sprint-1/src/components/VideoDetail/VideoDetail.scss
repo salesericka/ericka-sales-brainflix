@@ -14,12 +14,14 @@
       }
 
    &__box{
+      border-bottom: 1px solid $text-field-border;
+      padding-bottom:$s-unit;
       @include tablet{
          @include flex-between;
          flex-wrap: wrap;
          align-items: baseline;
          @include desktop {
-            border-bottom: 1px solid $text-field-border;
+            
          }
       }
    }
@@ -28,16 +30,23 @@
       margin-top:$l-unit;
       @include mobile-header-text;
       width:100%;
-      font-family: "AvenirBold";
    }
-
+   &__channel {
+      margin-top:$s-unit;
+   }
    &__date {
-      padding-left: 0.3rem;      
+      padding-left: $s-unit;      
    }
 
    &__info {
+      margin-top:$m-unit;
       display:flex;
-      align-items: flex-end;
+      @include tablet {
+         margin-top:0;
+      }
+      @include desktop {
+         margin-right:$s-unit;
+      }
    }
 
    &__views{
@@ -48,6 +57,7 @@
    }
 
    &__bio {
+      margin-top:$s-unit;
       max-width: 30.9375rem;
    }
 }

@@ -18,6 +18,19 @@
     format("truetype");
 }
 
+.video-detail__title {
+  font-family:"AvenirBold";
+  @include mobile-header-text;
+    @include tablet{
+      @include h1-text;
+    }
+}
+
+.video-detail__channel,
+.comment__count{
+  font-family:"AvenirDemiBold";
+  @include mobile-subheader-text;
+}
 
 .comment__label,
 .video__list-title {
@@ -42,7 +55,10 @@
   @include h4-text;
 }
 
+.video-detail__bio,
 .comment__item-comment,
+.video-detail__views,
+.video-detail__likes,
 .video__item-channel {
   color: $primary-color;
   @include mobile-p-text;

@@ -7,3 +7,19 @@
    box-sizing: border-box;
    font-family: "Avenir";
  }
+ .video-container{
+   @include desktop {
+     display:flex;
+     flex-wrap: wrap;
+     align-items: center;
+    //  justify-content: space-between;
+     justify-content: center;
+   }
+ }
+
+ .video-main {
+   @include desktop {
+     width:712px;
+     border-right: 1px solid $text-field-border;
+   }
+ }

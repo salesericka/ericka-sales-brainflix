@@ -12,18 +12,17 @@ function CommentForm (){
       </h3>
 
       <form className="comment">
-
         <UserPhoto src={profilePhoto}/>
-
         <div className="comment__input">
-
           <label className="comment__label">
             Join the conversation
-
-          <textarea name="comment" className="comment__input-box" placeholder="Write comment here" rows='1' required></textarea>
+            <textarea name="comment" className="comment__input-box" placeholder="Write comment here" rows='1' required></textarea>
           </label>
+          <div className="comment__btn">
           <Button button="Comment"/>
         </div>
+        </div>
+
       </form>
     </section>
   );

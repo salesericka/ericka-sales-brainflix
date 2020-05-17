@@ -41,6 +41,7 @@
 
 @mixin desktop-padding-one-side {
   padding-left: 6.875rem;
+  padding-right:0;
 }
 @mixin about-desktop-padding {
   padding: 0 5rem;

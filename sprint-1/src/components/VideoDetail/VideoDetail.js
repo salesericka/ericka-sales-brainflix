@@ -3,7 +3,7 @@ import './VideoDetail.scss';
 import viewsIcon from '../../assets/icons/svg/Icon-views.svg';
 import likesIcon from '../../assets/icons/svg/Icon-likes.svg';
 function VideosDetail (props) {
-
+   
 console.log((props.title))
   
    return(  
@@ -17,15 +17,17 @@ console.log((props.title))
          <h4 className="video-detail__channel">
             By {props.channel}
             <span className="video-detail__date">
-            {props.date}
+            {props.timestamp}
             </span>
          </h4>
          <div className="video-detail__info">
-            <div className="video-detail__views">
-               <img src={viewsIcon} alt="Views Icon" className="video-detail__icon"/> {props.views}
-            </div>
-            <div className="video-detail__likes">
-               <img src={likesIcon} alt="Likes Icon" className="video-detail__icon"/> {props.likes}
+               <img src={viewsIcon} alt="Views Icon" className="video-detail__icon"/>
+               <div className="video-detail__views">
+               {props.views}
+               </div>
+               <img src={likesIcon} alt="Likes Icon" className="video-detail__icon"/>
+               <div className="video-detail__likes">
+               {props.likes}
             </div>
          </div>
       </div>

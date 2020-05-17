@@ -12,15 +12,19 @@
    }
 }
 .comment {
+   margin-top:$m-unit;
    @include flex-between;
    flex-direction:row;
-   padding-bottom:$s-unit;
+   padding-bottom:$m-unit;
    border-bottom: 1px solid $text-field-border;
    @include tablet {
       justify-content: flex-start;
       align-items: center;
    }
-   
+   &__count{
+      margin-top:$l-unit;
+
+   }
    &__input{
       margin-left: $m-unit;
       width:100%;
@@ -29,8 +33,15 @@
          align-items: center;
       }
    }
-
+   &__btn {
+      margin-top:$s-unit;
+      @include tablet{
+      margin:0 $s-unit 0 $s-unit;
+      width:160px;
+      }
+   }
    &__label {
+      width:100%;
       @include tablet {
          justify-self:row;
       }
@@ -38,8 +49,12 @@
    &__input-box {
       box-sizing: border-box;
       margin-top:0.3125rem;
+
       @include form-format;
       resize: inherit;
       object-fit: contain;
+      @include tablet{
+         margin-bottom:$s-unit;
+      }
    }
 }
