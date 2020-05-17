@@ -144,16 +144,16 @@
   border: 1px solid $text-field-border ;
   border-radius: 0.25rem;
   &:focus {
-    border: 0.125rem solid $brainflix-blue ;
-  }
-  &:active {
-    height:auto;
+    border: 0.125rem solid $brainflix-blue;
   }
 }
 
 @mixin video-setting-format {
-  // height:10vw;
-  // max-height:2.125rem;
+  height:9vw;
+  max-height:3rem;
   border-radius: 0.375rem;
   background-color: rgba(0, 0, 0, 0.37) ;
+  @include tablet{
+    max-height:2rem;
+  }
 }

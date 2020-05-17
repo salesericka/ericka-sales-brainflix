@@ -4,8 +4,7 @@
 
 
 .btn {
-   font-family: "AvenirBold";
-   color:$light-text;
+   display:flex;
    justify-content: center;
    align-items: center;
    @include button-format;
@@ -17,7 +16,12 @@
       max-height: 3.125rem;
       max-width:160px;
    }
+
    &__img {
       padding-right:$s-unit;
+   }
+   &__text{
+      font-family: "AvenirBold";
+      color:$light-text;
    }
 }

@@ -1,8 +1,7 @@
 @import "../../styles/partials/mixins";
 @import "../../styles/partials/variables";
-@import "../../styles/partials/typography";
 
-.video {
+.video__list-container {
    @include mobile-padding-side;
 
    @include tablet{
@@ -13,12 +12,8 @@
       margin:0 7rem 0 $s-unit;
       width:360px;
    }
+}
 
-   &__list-title {
-      margin: $l-unit 0;
-   }
-
-   &__list {
-      padding:0;
-   }
+.video__list-title {
+   margin: $l-unit 0;
 }

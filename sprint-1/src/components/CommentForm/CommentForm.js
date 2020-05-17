@@ -6,23 +6,21 @@ import './CommentForm.scss';
 
 function CommentForm (){
   return(
-    <section className="form__container">
+    <section className="comment__form-container">
       <h3 className="comment__count">
         3 Comments
       </h3>
-
-      <form className="comment">
+      <form className="comment__form">
         <UserPhoto src={profilePhoto}/>
-        <div className="comment__input">
-          <label className="comment__label">
+        <div className="comment__form-input">
+          <label className="comment__form-label">
             Join the conversation
-            <textarea name="comment" className="comment__input-box" placeholder="Write comment here" rows='1' required></textarea>
+            <textarea name="comment" className="comment__form-input-box" placeholder="Write comment here" rows='1' required></textarea>
           </label>
-          <div className="comment__btn">
-          <Button button="Comment"/>
+          <div className="comment__form-btn">
+            <Button button="Comment"/>
+          </div>
         </div>
-        </div>
-
       </form>
     </section>
   );

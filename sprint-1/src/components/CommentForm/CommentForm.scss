@@ -1,8 +1,7 @@
 @import "../../styles/partials/mixins";
 @import "../../styles/partials/variables";
-@import "../../styles/partials/typography";
 
-.form__container{
+.comment__form-container{
    @include mobile-padding-side;
    @include tablet {
       @include tablet-padding-side;
@@ -11,7 +10,11 @@
       @include desktop-padding-one-side;
    }
 }
-.comment {
+.comment__count{
+   margin-top:$l-unit;
+}
+
+.comment__form {
    margin-top:$m-unit;
    @include flex-between;
    flex-direction:row;
@@ -21,11 +24,7 @@
       justify-content: flex-start;
       align-items: center;
    }
-   &__count{
-      margin-top:$l-unit;
-
-   }
-   &__input{
+   &-input{
       margin-left: $m-unit;
       width:100%;
       @include tablet {
@@ -33,27 +32,28 @@
          align-items: center;
       }
    }
-   &__btn {
+   &-btn {
       margin-top:$s-unit;
       @include tablet{
       margin:0 $s-unit 0 $s-unit;
       width:160px;
       }
    }
-   &__label {
+   &-label {
       width:100%;
       @include tablet {
          justify-self:row;
       }
    }
-   &__input-box {
+   &-input-box {
       box-sizing: border-box;
       margin-top:0.3125rem;
-
+      height:100px;
       @include form-format;
       resize: inherit;
       object-fit: contain;
       @include tablet{
+         height:3rem;
          margin-bottom:$s-unit;
       }
    }
