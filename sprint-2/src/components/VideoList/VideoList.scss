@@ -1,0 +1,19 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.video__list-container {
+   @include mobile-padding-side;
+
+   @include tablet{
+      @include tablet-padding-side;
+   }
+
+   @include desktop {
+      margin:0 7rem 0 $s-unit;
+      width:360px;
+   }
+}
+
+.video__list-title {
+   margin: $l-unit 0;
+}

@@ -6,6 +6,9 @@ import testVideo from '../../assets/video/brainStation-Sample-Video.mp4';
 import './HeroVideo.scss';
 
 function HeroVideo (props){
+
+   // console.log(props);
+   
     return ( 
       <div className="hero">
          <div className="hero-video__container">

@@ -1,0 +1,68 @@
+@import "_mixins";
+
+// Fonts
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/global-font/avenir-next-pro-lt/alternative-files/Linotype-AvenirNextLTPro.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "AvenirDemiBold";
+  src: url("../../assets/global-font/avenir-next-pro-lt/alternative-files/Linotype-AvenirNextLTProDemi.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "AvenirBold";
+  src: url('../../assets/global-font/avenir-next-pro-lt/alternative-files/Linotype-AvenirNextLTProBold.ttf')
+    format("truetype");
+}
+
+.video-detail__title {
+  font-family:"AvenirBold";
+  @include mobile-header-text;
+    @include tablet{
+      @include h1-text;
+    }
+}
+
+.video-detail__channel,
+.comment__count{
+  font-family:"AvenirDemiBold";
+  @include mobile-subheader-text;
+}
+
+.comment__label,
+.video__list-title {
+  font-family: "AvenirDemiBold";
+  color: $text-label-style;
+  text-transform: uppercase;
+  @include h4-text;
+}
+
+.comment__item-user,
+.video__item-title{
+  font-family: "AvenirBold";
+  color: $primary-color;
+  @include h4-text;
+}
+
+.comment__item-date,
+.video-detail__date{
+  font-family: "Avenir";
+  color: $text-label-style;
+  text-transform: uppercase;
+  @include h4-text;
+}
+
+.video-detail__bio,
+.comment__item-comment,
+.video-detail__views,
+.video-detail__likes,
+.video__item-channel {
+  color: $primary-color;
+  @include mobile-p-text;
+  @include tablet {
+    @include h4-text;
+  }
+}

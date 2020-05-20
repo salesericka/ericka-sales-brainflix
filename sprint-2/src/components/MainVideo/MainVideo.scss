@@ -1,0 +1,29 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.video-detail__box{
+   @include tablet{
+      @include flex-between;
+      flex-wrap: wrap;
+      align-items: baseline;
+   }
+
+   &__title {
+      width:100%;
+   }
+
+   &__info {
+      display:flex;
+   }
+}
+
+.comment__list {
+   margin-top:0;
+   @include mobile-padding-side;
+      @include tablet{
+         @include tablet-padding-side;
+      }
+      @include desktop{
+         @include desktop-padding-one-side;
+      }
+}

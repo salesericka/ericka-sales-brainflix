@@ -1,0 +1,27 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+@import '../../styles/partials/typography';
+
+
+.btn {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   @include button-format;
+   @include mobile-subheader-text;
+   text-transform: uppercase;
+   @include tablet {
+      margin: 0 $s-unit 0 0;
+      padding: 0.78rem $s-unit;
+      max-height: 3.125rem;
+      max-width:160px;
+   }
+
+   &__img {
+      padding-right:$s-unit;
+   }
+   &__text{
+      font-family: "AvenirBold";
+      color:$light-text;
+   }
+}

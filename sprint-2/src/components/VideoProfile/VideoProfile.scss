@@ -1,0 +1,41 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.video__item {
+   list-style-type: none;
+   height:70px;
+   margin-bottom:$m-unit;
+   display:flex;
+
+
+   &-pic {
+      width:120px;
+      height:70px;
+      border-radius: 4px;
+      object-fit: cover;
+      margin-right:$s-unit;
+   }
+
+   &-box{
+      width:120px;
+      @include tablet {
+         width:250px;
+      }
+   }
+
+   &-title {
+      width:100%;
+      overflow: hidden;
+      text-overflow:ellipsis;
+
+      //tbh I dk what this is, but it works, I'm assuming that it creates another row when the text overflows. specify how many line of row under "line-clamp"
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+   }
+
+   &-channel {
+      margin-top: 5px;
+   }
+
+}

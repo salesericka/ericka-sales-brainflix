@@ -8,7 +8,7 @@ import './MainVideo.scss';
 class MainVideo extends React.Component{
    render(){
       return(<>
-         <HeroVideo 
+         <HeroVideo
             {...this.props}
          />
          <section className="video-main">
