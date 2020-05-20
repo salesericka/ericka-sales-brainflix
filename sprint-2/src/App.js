@@ -3,6 +3,7 @@ import Header from './components/Header/Header';
 import  MainVideo from './components/MainVideo/MainVideo';
 import videos from './components/videos'
 import VideoList from './components/VideoList/VideoList';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import './App.scss';
 
 class App extends Component {
@@ -10,10 +11,21 @@ class App extends Component {
       mainVideos:videos[0],
       listVideos:videos
     }
+
+    clickHandler=()=>{
+      console.log("Clicked");
+    }
+
     render(){
     return ( 
+      <>
+      <BrowserRouter>
+        
+     
+
+
       <div className="App">
-        <Header/>
+        <Header clickHandler={this.clickHandler}/>
         <article className="video-container">
           <MainVideo
             id={this.state.mainVideos.id}
@@ -30,7 +42,13 @@ class App extends Component {
             listVideos={this.state.listVideos}
           />
         </article>
+        {/* <Switch>
+          <Route path="/" exact component={App}>
+          </Route>
+        </Switch> */}
       </div>
+      </BrowserRouter>
+      </>
     );
   }
 }

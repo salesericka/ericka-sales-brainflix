@@ -1,6 +1,7 @@
 import React from 'react';
 import './Button.scss';
 
+// event.preventDefault();
 
 function Button (props){
  return(
