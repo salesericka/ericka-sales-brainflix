@@ -7,15 +7,11 @@ import './HeroVideo.scss';
 
 function HeroVideo (props){
 
-   console.log(props);
-   
     return ( 
       <div className="hero">
          <div className="hero-video__container">
             <video className="hero-video" poster={props.image} >
-               {/* {props.data}  */}
-               <source src={testVideo}/>
-               
+               <source src={testVideo}/> 
             </video>
             <div className="hero-video__setting">
                <button className="hero-video__btn-play hero-video__btn">

@@ -1,13 +1,13 @@
 import React from 'react';
-import './Logo.scss';
-import LogoPic from '../../assets/logo/logo-brainflix.svg'
+import LogoPic from '../../assets/logo/logo-brainflix.svg';
+import { Link} from 'react-router-dom';
 
 
 function Logo(){
  return(
-  <a href="index.html" className="nav-bar__logo">
-   <img className="logo__pic" src={LogoPic} alt="BrainFlix Logo"/>
-  </a>
+    <Link to="/">
+         <img className="logo__pic" src={LogoPic} alt="BrainFlix Logo"/>
+   </Link>
  )
 }
 

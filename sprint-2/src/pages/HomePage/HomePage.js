@@ -5,7 +5,13 @@ import Axios from 'axios';
 
 const API_URL = "https://project-2-api.herokuapp.com/"
 let api_key="?api_key=2bf5a623-de7a-4dc2-b654-73294d43b2a3"
-console.log(Axios.get(`${API_URL}videos/1af0jruup5gu${api_key}`))
+
+// console.log(Axios.get(`${API_URL}videos/${api_key}`));
+let getAxios = Axios.get(`${API_URL}videos/${api_key}`);
+
+getAxios.then(response=>{
+   console.log(response.data[2].id)
+})
 
 class HomePage extends Component{
 
@@ -14,6 +20,10 @@ class HomePage extends Component{
       comments:[]
     }
 
+   //  handleVideoSelect =()=>{
+   //     console.log('Selected Video', video)
+   //  }
+
     componentDidMount(){
        Axios.get(`${API_URL}videos/1af0jruup5gu${api_key}`)
        .then(response=>{
@@ -21,7 +31,7 @@ class HomePage extends Component{
              mainVideo: response.data,
              comments:response.data.comments
           })
-          console.log(response.data)
+         //  console.log(response.data)
        })
        .catch(error=>console.log(error))
     }
@@ -29,7 +39,7 @@ class HomePage extends Component{
 
    render(){
 
-      console.log(this.state.comments.length)
+      // console.log(this.state.comments.length)
 
       return(
          <article className="video-container">
@@ -44,8 +54,7 @@ class HomePage extends Component{
            image={this.state.mainVideo.image}
            comments={this.state.comments}
          />
-         <VideoList
-         />
+         <VideoList />
        </article>
       )
    }

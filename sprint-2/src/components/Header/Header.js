@@ -1,13 +1,13 @@
 import React from 'react';
 import Logo from '../Logo/Logo';
 import profilePhoto from '../../assets/images/mohan-muruge.jpg';
-// import Button from '../Button/Button';
 import UserPhoto from '../UserPhoto/UserPhoto';
 import uploadIcon from '../../assets/icons/svg/Icon-upload.svg';
 import './Header.scss';
+import { Link } from 'react-router-dom';
 
 function Header (props) {
-  console.log(props)
+
   return( 
     <header className="hdr__nav-bar">
       <Logo />
@@ -17,13 +17,12 @@ function Header (props) {
           </input>
           <div className="nav-bar__box">
             <div className="nav-bar__box-btn">
-              {/* <Button 
-              button='Upload'
-              img={uploadIcon}/> */}
+            <Link to="/UploadPage" className="nav-bar__btn-link">
               <button className="btn" onClick={props.clickHandler}>
                 <img src={uploadIcon} className="btn__img" alt=""/>
                   Upload
               </button>
+            </Link>
             </div>
             <UserPhoto src={profilePhoto}/>
           </div>

@@ -5,9 +5,8 @@ function VideoProfile (props){
    return(
       <li className="video__item">
          <div className="video__item-box-pic">
-            <img className ="video__item-pic" alt="" src={props.image}/>
+            <img className ="video__item-pic" alt="Video Pic" src={props.image}/>
          </div> 
-
          <div className="video__item-box">
             <h4 className="video__item-title">
                {props.title}

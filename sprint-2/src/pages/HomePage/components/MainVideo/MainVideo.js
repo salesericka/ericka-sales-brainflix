@@ -8,8 +8,6 @@ import './MainVideo.scss';
 class MainVideo extends React.Component{
    
    render(){
-      console.log(this.props.comments)
-
 
       return(
       <>
