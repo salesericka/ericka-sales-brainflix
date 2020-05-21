@@ -6,8 +6,13 @@ import Comments from '../Comments/Comments';
 import './MainVideo.scss';
 
 class MainVideo extends React.Component{
+   
    render(){
-      return(<>
+      console.log(this.props.comments)
+
+
+      return(
+      <>
          <HeroVideo
             {...this.props}
          />
@@ -17,14 +22,16 @@ class MainVideo extends React.Component{
             />
             <CommentForm />
             <ul className="comment__list">
-               {this.props.comment.map(comments=>{
+
+               {this.props.comments.map(comments=>{
                return <Comments
                key={comments.id}
                name={comments.name}
                date={comments.date}
-               comment={comments.comment}
+               comments={comments.comment}
                 />
                })}
+
              </ul>
          </section>
       </>

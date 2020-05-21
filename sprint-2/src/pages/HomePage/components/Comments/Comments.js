@@ -1,5 +1,5 @@
 import React from 'react';
-import UserPhoto from '../UserPhoto/UserPhoto';
+import UserPhoto from '../../../../components/UserPhoto/UserPhoto';
 import './Comments.scss';
 
 function Comments (props){
@@ -14,7 +14,7 @@ function Comments (props){
                </span>
             </h4>
             <p className="comment__item-comment">
-               {props.comment}
+               {props.comments}
             </p>
          </div>
       </li>

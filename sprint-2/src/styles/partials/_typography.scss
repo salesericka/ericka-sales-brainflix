@@ -18,7 +18,8 @@
     format("truetype");
 }
 
-.video-detail__title {
+.video-detail__title,
+.upload-video__title {
   font-family:"AvenirBold";
   @include mobile-header-text;
     @include tablet{
@@ -33,7 +34,10 @@
 }
 
 .comment__label,
-.video__list-title {
+.video__list-title,
+.upload-video__label-img,
+.upload-video__label-title,
+.upload-video__label-description {
   font-family: "AvenirDemiBold";
   color: $text-label-style;
   text-transform: uppercase;
@@ -67,9 +71,17 @@
   }
 }
 
-.btn{
+.btn,
+.upload-video__btn-publish{
   font-family: "AvenirBold";
   color:$light-text;
+  @include mobile-subheader-text;
+  text-transform: uppercase;
+}
+
+.upload-video__btn-cancel {
+  font-family: "AvenirBold";
+  color:$brainflix-blue;
   @include mobile-subheader-text;
   text-transform: uppercase;
 }
