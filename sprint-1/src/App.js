@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header/Header';
-import  MainVideo from './components/MainVideo/MainVideo';
+import  MainVideo from './';
 import videos from './components/videos'
 import VideoList from './components/VideoList/VideoList';
 import './App.scss';
