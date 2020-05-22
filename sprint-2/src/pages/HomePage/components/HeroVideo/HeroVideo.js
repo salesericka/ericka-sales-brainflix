@@ -6,11 +6,11 @@ import testVideo from '../../../../assets/video/brainStation-Sample-Video.mp4';
 import './HeroVideo.scss';
 
 function HeroVideo (props){
-
+   // console.log(props)
     return ( 
       <div className="hero">
          <div className="hero-video__container">
-            <video className="hero-video" poster={props.image} >
+            <video className="hero-video" poster={props.mainVideo.image} >
                <source src={testVideo}/> 
             </video>
             <div className="hero-video__setting">

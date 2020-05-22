@@ -1,32 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import VideoProfile from '../VideoProfile/VideoProfile';
 import './VideoList.scss';
-import Axios from 'axios';
+// import HomePage from '../../HomePage';
+import {BrowserRouter, Route, Switch, Link} from 'react-router-dom';
 
-
-const API_URL = "https://project-2-api.herokuapp.com/"
-let api_key="?api_key=2bf5a623-de7a-4dc2-b654-73294d43b2a3"
-
-// console.log(Axios.get(`${API_URL}videos${api_key}`))
-
-class VideoList extends Component {
-   state={
-      data:[]
-   }
-
-   componentDidMount(){
-      Axios.get(`${API_URL}videos${api_key}`)
-      .then(response=>{
-         this.setState({
-            data: response.data
-         })
-         // console.log(response.data)
-      })
-      .catch(error=>console.log(error))
-   }
-
-   render(){
-
+function VideoList(props){
+   // console.log(props)
+   // console.log(props.listVideos)
    return(
       <aside className="video__list-container">
          <h4 className="video__list-title">
@@ -34,20 +14,27 @@ class VideoList extends Component {
          </h4>
          <ul className="video__list">
 
-            {this.state.data.map(videos=>{
-               // if(videos !== )
-               return <VideoProfile
+            {props.listVideos.map(videos=>{
+
+               if(videos.title !== props.mainVideo.title)
+               return <Link
+               to={`/${videos.id}`}
                key={videos.id}
+               className="video__list-link"
+               >
+               <VideoProfile
                title={videos.title}
                channel={videos.channel}
                image={videos.image} 
+               selectVideo={props.selectVideo}
                />
+               </Link>
             })}
-
+      {/* <Switch>
+         <Route path={`${props.match.path}/:id`} component={VideoProfile}/>
+      </Switch> */}
          </ul>
       </aside>
    )
- }
 }
 export default VideoList;
-export {API_URL};

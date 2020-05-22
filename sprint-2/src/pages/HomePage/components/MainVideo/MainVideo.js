@@ -5,27 +5,24 @@ import CommentForm from '../CommentForm/CommentForm';
 import Comments from '../Comments/Comments';
 import './MainVideo.scss';
 
-class MainVideo extends React.Component{
-   
-   render(){
-
-      return(
+function MainVideo (props){
+   // console.log(props)
+   return(
       <>
          <HeroVideo
-            {...this.props}
+            {...props}
          />
          <section className="video-main">
             <VideoDetail 
-               {...this.props}
+               {...props}
             />
             <CommentForm />
             <ul className="comment__list">
-
-               {this.props.comments.map(comments=>{
+               {props.comments.map(comments=>{
                return <Comments
                key={comments.id}
                name={comments.name}
-               date={comments.date}
+               date={comments.timestamp}
                comments={comments.comment}
                 />
                })}
@@ -33,8 +30,7 @@ class MainVideo extends React.Component{
              </ul>
          </section>
       </>
-      );
-   }
+      )
 }
 
 export default MainVideo;
