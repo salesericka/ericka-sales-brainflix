@@ -10,6 +10,7 @@
       @include desktop-padding-one-side;
    }
 }
+
 .comment__count{
    margin-top:$l-unit;
 }
@@ -19,7 +20,7 @@
    @include flex-between;
    flex-direction:row;
    padding-bottom:$m-unit;
-   border-bottom: 1px solid $text-field-border;
+   border-bottom: 0.0625rem solid $text-field-border;
    @include tablet {
       justify-content: flex-start;
       align-items: center;
@@ -35,8 +36,8 @@
    &-btn {
       margin-top:$s-unit;
       @include tablet{
-      margin:0 $s-unit 0 $s-unit;
-      width:160px;
+         margin:0 $s-unit;
+         width:10rem;
       }
    }
    &-label {
@@ -48,7 +49,7 @@
    &-input-box {
       box-sizing: border-box;
       margin-top:0.3125rem;
-      height:100px;
+      height:6.25rem;
       @include form-format;
       resize: inherit;
       object-fit: contain;

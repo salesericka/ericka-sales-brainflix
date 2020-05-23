@@ -6,7 +6,7 @@
    list-style-type: none;
    display:flex;
    align-items: flex-start;
-   border-bottom: 1px solid $text-field-border;
+   border-bottom: 0.0625rem solid $text-field-border;
 
    &-box {
       margin-left: $s-unit;
@@ -28,8 +28,8 @@
       }
    }
    &-comment {
-      margin-top:8px;
-      max-width:624px;
+      margin-top:0.5rem;
+      max-width:39rem;
       @include desktop{
          margin-right:$s-unit;
       }

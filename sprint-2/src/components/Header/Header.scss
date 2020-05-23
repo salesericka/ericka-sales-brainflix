@@ -6,7 +6,7 @@
    @include flex-column;
    align-items: center;
    margin-top:$s-unit;   
-   padding: 0 $s-unit 0 $s-unit;      
+   @include mobile-padding-side;  
    @include tablet{
       @include tablet-padding-side;
       @include flex-between;
@@ -19,7 +19,7 @@
 
 .nav-bar{
    width:100%;
-   
+
    &__form{
       @include tablet{
          display:flex;
@@ -50,12 +50,12 @@
    @include form-format;
    background-image: url("../../assets/icons/svg/Icon-search.svg");
    background-repeat: no-repeat;
-   background-size: 20px;
+   background-size: 1.25rem;
    background-position: left;
    background-position-x: 0.75rem;
    padding: 1rem;
    text-indent: $m-unit;
-   margin-top:8px;
+   margin-top:0.5rem;
    @include tablet {
       width:45%;
       margin:0 $s-unit 0 0;
@@ -76,7 +76,7 @@
       margin: 0 $s-unit 0 0;
       padding: 0.78rem $s-unit;
       max-height: 3.125rem;
-      max-width:160px;
+      max-width:10rem;
    }
 
    &__img {

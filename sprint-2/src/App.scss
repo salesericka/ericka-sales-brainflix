@@ -2,23 +2,23 @@
 @import './styles/partials/mixins';
 
 * {
-   padding: 0;
-   margin: 0;
-   box-sizing: border-box;
-   font-family: "Avenir";
- }
- .video-container{
-   @include desktop {
-     display:flex;
-     flex-wrap: wrap;
-     align-items: center;
-     justify-content: center;
-   }
- }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Avenir";
+}
+.video-container{
+  @include desktop {
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
- .video-main {
-   @include desktop {
-     width:712px;
-     border-right: 1px solid $text-field-border;
-   }
- }
+.video-main {
+  @include desktop {
+    width:44.5rem;
+    border-right: 0.0625rem solid $text-field-border;
+  }
+}

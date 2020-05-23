@@ -1,28 +1,22 @@
 @import "../../../../styles/partials/mixins";
 @import "../../../../styles/partials/variables";
-@import "../../../../styles/partials/typography";
-
 
 .video-detail{
    @include mobile-padding-side;
-      @include tablet {
-         @include tablet-padding-side;
-      }
-
-      @include desktop {
-         @include desktop-padding-one-side;
-      }
+   @include tablet {
+      @include tablet-padding-side;
+   }
+   @include desktop {
+      @include desktop-padding-one-side;
+   }
 
    &__box{
-      border-bottom: 1px solid $text-field-border;
+      border-bottom: 0.0625rem solid $text-field-border;
       padding-bottom:$s-unit;
       @include tablet{
          @include flex-between;
          flex-wrap: wrap;
          align-items: baseline;
-         @include desktop {
-            
-         }
       }
    }
 
@@ -31,9 +25,11 @@
       @include mobile-header-text;
       width:100%;
    }
+
    &__channel {
       margin-top:$s-unit;
    }
+
    &__date {
       padding-left: $s-unit;      
    }
@@ -52,6 +48,7 @@
    &__views{
       margin-right:$m-unit;
    }
+
    &__icon {
       margin-right: 0.5rem;
    }

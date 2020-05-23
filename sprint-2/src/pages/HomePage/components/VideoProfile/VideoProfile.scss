@@ -3,23 +3,22 @@
 
 .video__item {
    list-style-type: none;
-   height:70px;
+   height:4.375rem;
    margin-bottom:$m-unit;
    display:flex;
 
-
    &-pic {
-      width:120px;
-      height:70px;
-      border-radius: 4px;
+      width:7.5rem;
+      height:4.375rem;
+      border-radius: 0.25rem;
       object-fit: cover;
       margin-right:$s-unit;
    }
 
    &-box{
-      width:120px;
+      width:7.5rem;
       @include tablet {
-         width:250px;
+         width:15.625rem;
       }
    }
 
@@ -35,7 +34,7 @@
    }
 
    &-channel {
-      margin-top: 5px;
+      margin-top: 0.3rem;
    }
 
 }

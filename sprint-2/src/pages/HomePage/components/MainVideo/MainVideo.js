@@ -6,7 +6,6 @@ import Comments from '../Comments/Comments';
 import './MainVideo.scss';
 
 function MainVideo (props){
-   // console.log(props)
    return(
       <>
          <HeroVideo
@@ -20,17 +19,16 @@ function MainVideo (props){
             <ul className="comment__list">
                {props.comments.map(comments=>{
                return <Comments
-               key={comments.id}
-               name={comments.name}
-               date={comments.timestamp}
-               comments={comments.comment}
-                />
+                  key={comments.id}
+                  name={comments.name}
+                  date={comments.timestamp}
+                  comments={comments.comment}
+               />
                })}
-
-             </ul>
+            </ul>
          </section>
       </>
-      )
+   )
 }
 
 export default MainVideo;

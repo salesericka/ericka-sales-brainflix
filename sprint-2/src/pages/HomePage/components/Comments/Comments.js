@@ -28,7 +28,7 @@ function Comments (props){
             </p>
          </div>
       </li>
-   )
+   );
 }
 
 export default Comments;

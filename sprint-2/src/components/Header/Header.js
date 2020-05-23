@@ -7,7 +7,6 @@ import './Header.scss';
 import { Link } from 'react-router-dom';
 
 function Header (props) {
-
   return( 
     <header className="hdr__nav-bar">
       <Logo />
@@ -19,8 +18,8 @@ function Header (props) {
             <div className="nav-bar__box-btn">
             <Link to="/UploadPage" className="nav-bar__btn-link">
               <button className="btn" onClick={props.clickHandler}>
-                <img src={uploadIcon} className="btn__img" alt=""/>
-                  Upload
+                <img src={uploadIcon} className="btn__img" alt="btn-icon"/>
+                Upload
               </button>
             </Link>
             </div>

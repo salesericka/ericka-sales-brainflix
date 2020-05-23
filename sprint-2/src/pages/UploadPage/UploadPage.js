@@ -1,8 +1,6 @@
 import React from 'react';
-import Button from '../../components/Button/Button';
 import defaultImg from '../../assets/images/upload-video-preview.jpg';
 import './UploadPage.scss';
-
 
 function UploadPage(){
    return(
@@ -15,7 +13,7 @@ function UploadPage(){
                <label className="upload-video__label-img">
                   Video thumbnail
                </label>
-               <input type="image" alt=""  src={defaultImg} className="upload-video__input-img">
+               <input type="image" alt="upload image"  src={defaultImg} className="upload-video__input-img">
                </input>
             </div>
             
@@ -43,7 +41,6 @@ function UploadPage(){
                Cancel
             </button>
          </div>
-
       </div>
    )
 }

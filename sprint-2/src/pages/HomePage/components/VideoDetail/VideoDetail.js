@@ -3,10 +3,8 @@ import './VideoDetail.scss';
 import viewsIcon from '../../../../assets/icons/svg/Icon-views.svg';
 import likesIcon from '../../../../assets/icons/svg/Icon-likes.svg';
 
-
-
 function VideosDetail (props) {
-   
+
    function timeConvert(timestamp){
       let date = new Date(timestamp)
       let day = String(date.getDate()).padStart(2,"0");
