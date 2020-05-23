@@ -26,7 +26,8 @@
          border-bottom: 0.0625rem solid $text-field-border;
       }
       @include desktop {
-         display:flex;
+         @include flex-between;
+
       }
    }
 
@@ -37,12 +38,16 @@
 
    &__input-img {
       width:100%;
+      object-fit: cover;
       border-radius: 0.25rem;
-      height:9.5625rem;
+      max-width:18rem;
+      max-height:9.5625rem;
+      background-color: black;
       @include tablet {
-         width:21.5rem;
-         height:11.4375rem;
+         max-width:21.5rem;
+         max-height:11.4375rem;
       }
+
    }
 
    &__box-detail{
@@ -52,7 +57,9 @@
          padding-bottom:$xl-unit;
       }
       @include desktop{
-         margin-bottom: $m-unit;
+         width:60%;
+         margin: 0 0 $xl-unit 0;
+         padding:0;
       }
    }
 
