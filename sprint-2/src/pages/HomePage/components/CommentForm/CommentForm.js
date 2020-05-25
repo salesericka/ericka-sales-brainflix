@@ -4,11 +4,11 @@ import UserPhoto from '../../../../components/UserPhoto/UserPhoto';
 import profilePhoto from '../../../../assets/images/mohan-muruge.jpg';
 import './CommentForm.scss';
 
-function CommentForm (){
+function CommentForm (props){
   return(
     <section className="comment__form-container">
       <h3 className="comment__count">
-        3 Comments
+        {props.mainVideo.comments.length} Comments
       </h3>
       <form className="comment__form">
 

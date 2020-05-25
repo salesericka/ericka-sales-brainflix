@@ -1,6 +1,6 @@
-@import "../../styles/partials/mixins";
-@import "../../styles/partials/variables";
-@import "../../styles/partials/typography";
+@import "../../styles/mixins";
+@import "../../styles/variables";
+@import "../../styles/typography";
 
 .hdr__nav-bar {
    @include flex-column;

@@ -15,7 +15,7 @@ function MainVideo (props){
             <VideoDetail 
                {...props}
             />
-            <CommentForm />
+            <CommentForm {...props}/>
             <ul className="comment__list">
                {props.comments.map(comments=>{
                return <Comments
