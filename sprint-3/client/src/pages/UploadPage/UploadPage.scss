@@ -1,0 +1,112 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.upload-video{
+   @include mobile-padding-side;
+   @include tablet{
+      @include tablet-padding-side;
+   }
+   @include desktop {
+      @include desktop-padding-side;
+   }
+
+   &__title {
+      margin-top:$m-unit;
+      @include tablet {
+         margin-top:$xl-unit;
+      }
+   }
+
+   &__form {
+      margin-top:$m-unit;
+      @include tablet{
+         margin-top:$l-unit;
+         padding-top:$xl-unit;
+         border-top: 0.0625rem solid $text-field-border;
+         border-bottom: 0.0625rem solid $text-field-border;
+      }
+      @include desktop {
+         @include flex-between;
+
+      }
+   }
+
+   &__box-img{
+      display:flex;
+      flex-direction:column;
+   }
+
+   &__input-img {
+      width:100%;
+      object-fit: cover;
+      border-radius: 0.25rem;
+      max-width:18rem;
+      max-height:9.5625rem;
+      background-color: black;
+      @include tablet {
+         max-width:21.5rem;
+         max-height:11.4375rem;
+      }
+
+   }
+
+   &__box-detail{
+      width:100%;
+      margin-top:$l-unit;
+      @include tablet{
+         padding-bottom:$xl-unit;
+      }
+      @include desktop{
+         width:60%;
+         margin: 0 0 $xl-unit 0;
+         padding:0;
+      }
+   }
+
+   &__input-title{
+      @include form-format;
+   }
+
+   &__detail-wrapper{
+      margin-top:$m-unit;
+   }
+
+   &__input-description{
+      @include form-format;
+      height:8.9375rem;
+      resize:none;
+      @include desktop {
+         height:5.625rem;
+      }
+   }
+
+   &__wrapper-btn{
+      width:100%;
+      margin-top:$s-unit;
+      @include tablet{
+         margin:$xl-unit 0 $l-unit auto;
+         display:flex;
+         flex-direction: row-reverse;
+         width:50%;
+      }
+      @include desktop {
+         width:40%;
+      }
+   }
+
+   &__btn-publish{
+      @include button-format;
+   }
+
+   &__btn-cancel{
+      margin:$s-unit 0;
+      padding: $s-unit;
+      background-color:$light-text;
+      width:100%;
+      border: 0.0625rem solid $light-text ;
+      border-radius: 0.25rem;
+      @include tablet{
+         margin:0;
+      }
+   }
+}

@@ -1,0 +1,61 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/variables";
+
+.comment__form-container{
+   @include mobile-padding-side;
+   @include tablet {
+      @include tablet-padding-side;
+   }
+   @include desktop{
+      @include desktop-padding-one-side;
+   }
+}
+
+.comment__count{
+   margin-top:$l-unit;
+}
+
+.comment__form {
+   margin-top:$m-unit;
+   @include flex-between;
+   flex-direction:row;
+   padding-bottom:$m-unit;
+   border-bottom: 0.0625rem solid $text-field-border;
+   @include tablet {
+      justify-content: flex-start;
+      align-items: center;
+   }
+   &-input{
+      margin-left: $m-unit;
+      width:100%;
+      @include tablet {
+         @include flex-between;
+         align-items: center;
+      }
+   }
+   &-btn {
+      margin-top:$s-unit;
+      @include tablet{
+         margin:0 $s-unit;
+         width:10rem;
+      }
+   }
+   &-label {
+      width:100%;
+      @include tablet {
+         justify-self:row;
+      }
+   }
+   &-input-box {
+      box-sizing: border-box;
+      margin-top:0.3125rem;
+      height:6.25rem;
+      @include form-format;
+      resize: inherit;
+      object-fit: contain;
+      @include tablet{
+         height:3rem;
+         margin-bottom:$s-unit;
+      }
+   }
+}
