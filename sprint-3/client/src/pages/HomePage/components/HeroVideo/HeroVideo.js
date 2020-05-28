@@ -5,6 +5,7 @@ import btnVolume from '../../../../assets/icons/svg/Icon-volume.svg';
 import './HeroVideo.scss';
 
 function HeroVideo (props){
+
    return ( 
       <div className="hero">
          <div className="hero-video__container">            

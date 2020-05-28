@@ -3,8 +3,7 @@ import MainVideo from './components/MainVideo/MainVideo';
 import VideoList from './components/VideoList/VideoList';
 import axios from 'axios';
 
-const API_URL = "https://project-2-api.herokuapp.com/videos"
-let api_key="?api_key=2bf5a623-de7a-4dc2-b654-73294d43b2a3"
+const API_URL = process.env.REACT_APP_API_URL;
 
 class HomePage extends Component{
    //these are the objects that will change and get updated
@@ -27,13 +26,13 @@ class HomePage extends Component{
 
       //this gets video list data
       axios
-      .get(API_URL + api_key)
+      .get(`${API_URL}/videos`)
       .then(response=>{
          //this gets a single video data with more information
          axios
-         .get(API_URL + "/" + videoId + api_key)
+         .get(`${API_URL}/videos/${videoId}`)
          .then(result=>{
-            console.log("result data", result)
+
             this.setState({
                mainVideo:result.data,
                listVideos:response.data
@@ -55,7 +54,7 @@ class HomePage extends Component{
          }
 
          axios
-         .get(API_URL + "/" + videoId + api_key)
+         .get(`${API_URL}/videos/${videoId}`)
          .then(result=>{
             this.setState({
                mainVideo:result.data
@@ -83,28 +82,3 @@ class HomePage extends Component{
 
 export default HomePage;
 export {API_URL};
-
-  // getMainVideoData = () =>{
-
-   //    console.log("params in function", this.props.match)
-
-   //    axios
-   //    .get(`${API_URL}/1af0jruup5gu${api_key}`)
-   //    .then(response=>{
-   //       this.setState({
-   //          mainVideo: response.data,
-   //       })
-   //    })
-   //    .catch(error=>console.log(error))
-   // }
-
-   // getListVideoData = () =>{
-   //    axios
-   //    .get(`${API_URL}${api_key}`)
-   //    .then(response=>{
-   //       this.setState({
-   //          listVideos: response.data
-   //       })
-   //    })
-   //    .catch(error=>console.log(error))
-   // }

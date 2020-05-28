@@ -8,7 +8,7 @@ function CommentForm (props){
   return(
     <section className="comment__form-container">
       <h3 className="comment__count">
-        {props.mainVideo.comments.length} Comments
+        {props.mainVideo.comments.length} Comments 
       </h3>
       <form className="comment__form">
 

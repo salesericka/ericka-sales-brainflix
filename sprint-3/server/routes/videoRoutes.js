@@ -2,26 +2,29 @@ const express = require("express");
 const router = express.Router();
 const videoList=require('./data/videoList.json');
 const mainVideo=require("./data/mainVideo.json");
+const { v4: uuidv4 } = require('uuid');
 
 router.get('/',(req,res)=>{
    res.status(200).json(videoList);
 });
 
-router.get('/:id',(req,res)=>{
-   res.status(200).json(mainVideo.filter(video=>{
-      return video.id === req.params.id
+router.get('/:videoId',(req,res)=>{
+   res.status(200).json(mainVideo.find(video=>{
+      return video.id === req.params.videoId
    })
    );
 })
 
 router.post ('/',(req,res)=>{
    const { image, title, description } = req.body
+   videoList.push(req.body);
    res.status(201).json([
      ...videoList, 
      {
-       image,
-       title,
-       description
+      id:uuidv4(),
+      image,
+      title,
+      description
      }
    ])
 })

@@ -6,6 +6,7 @@ import Comments from '../Comments/Comments';
 import './MainVideo.scss';
 
 function MainVideo (props){
+
    return(
       <>
          <HeroVideo
@@ -16,8 +17,9 @@ function MainVideo (props){
                {...props}
             />
             <CommentForm {...props}/>
+
             <ul className="comment__list">
-               {props.comments.map(comments=>{
+               {props.mainVideo.comments.map(comments=>{
                return <Comments
                   key={comments.id}
                   name={comments.name}
