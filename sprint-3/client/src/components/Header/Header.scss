@@ -5,15 +5,17 @@
 .hdr__nav-bar {
    @include flex-column;
    align-items: center;
-   margin-top:$s-unit;   
-   @include mobile-padding-side;  
+   margin-top:$s-unit;
+   border-bottom: 0.0625rem solid $text-field-border;
+   padding: 0  1rem 1rem 1rem;
    @include tablet{
-      @include tablet-padding-side;
+      padding: 0 1.5rem 1.5rem 1.5rem;
       @include flex-between;
       flex-direction: row;
    }
    @include desktop {
-      @include desktop-padding-side;
+      padding: 0 6.875rem 1.5rem 6.875rem;
+      margin:$s-unit auto 0 auto;
    }
 }
 

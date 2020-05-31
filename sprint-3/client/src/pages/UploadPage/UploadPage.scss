@@ -8,6 +8,8 @@
    }
    @include desktop {
       @include desktop-padding-side;
+      max-width: 81.25rem;
+      margin:0 auto;
    }
 
    &__title {
@@ -17,17 +19,23 @@
       }
    }
 
-   &__form {
+   &__form {  
       margin-top:$m-unit;
       @include tablet{
+         
          margin-top:$l-unit;
+      }
+   }
+
+   &__border-wrapper {
+      @include tablet {
          padding-top:$xl-unit;
          border-top: 0.0625rem solid $text-field-border;
          border-bottom: 0.0625rem solid $text-field-border;
+         padding-bottom:$xl-unit;
       }
-      @include desktop {
+      @include desktop{
          @include flex-between;
-
       }
    }
 
@@ -53,8 +61,9 @@
    &__box-detail{
       width:100%;
       margin-top:$l-unit;
-      @include tablet{
-         padding-bottom:$xl-unit;
+      max-width: 31.25rem;
+      @include tablet {
+         
       }
       @include desktop{
          width:60%;
@@ -82,7 +91,7 @@
 
    &__wrapper-btn{
       width:100%;
-      margin-top:$s-unit;
+      margin-top:$s-unit;      
       @include tablet{
          margin:$xl-unit 0 $l-unit auto;
          display:flex;
@@ -96,9 +105,11 @@
 
    &__btn-publish{
       @include button-format;
+      max-width:21.875rem;
    }
 
    &__btn-cancel{
+      max-width:350px;
       margin:$s-unit 0;
       padding: $s-unit;
       background-color:$light-text;

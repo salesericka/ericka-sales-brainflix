@@ -15,15 +15,16 @@ class HomePage extends Component{
    }
 
    componentDidMount(){
+      this.refreshVideoData();
+   }
 
+   refreshVideoData =()=>{
       //default mainVideo
       let videoId = "1af0jruup5gu"
-
       //if path "/:id" change, turn videoId into that
       if(this.props.match.params.id){
          videoId = this.props.match.params.id
       }
-
       //this gets video list data
       axios
       .get(`${API_URL}/videos`)
@@ -32,13 +33,12 @@ class HomePage extends Component{
          axios
          .get(`${API_URL}/videos/${videoId}`)
          .then(result=>{
-
             this.setState({
                mainVideo:result.data,
                listVideos:response.data
-            })
-         }) 
-      })
+            });
+         });
+      });
    }
 
    componentDidUpdate(prevProps){

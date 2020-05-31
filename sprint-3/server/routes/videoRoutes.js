@@ -16,16 +16,15 @@ router.get('/:videoId',(req,res)=>{
 })
 
 router.post ('/',(req,res)=>{
-   const { image, title, description } = req.body
-   videoList.push(req.body);
+   const { title, 
+      image,
+      channel } = req.body
+   videoList.push({
+      id:uuidv4(),
+      ...req.body
+   });
    res.status(201).json([
      ...videoList, 
-     {
-      id:uuidv4(),
-      image,
-      title,
-      description
-     }
    ])
 })
 

@@ -6,7 +6,7 @@ import uploadIcon from '../../assets/icons/svg/Icon-upload.svg';
 import './Header.scss';
 import { Link } from 'react-router-dom';
 
-function Header (props) {
+function Header () {
   return( 
     <header className="hdr__nav-bar">
       <Logo />
@@ -17,7 +17,7 @@ function Header (props) {
           <div className="nav-bar__box">
             <div className="nav-bar__box-btn">
             <Link to="/UploadPage" className="nav-bar__btn-link">
-              <button className="btn" onClick={props.clickHandler}>
+              <button className="btn">
                 <img src={uploadIcon} className="btn__img" alt="btn-icon"/>
                 Upload
               </button>

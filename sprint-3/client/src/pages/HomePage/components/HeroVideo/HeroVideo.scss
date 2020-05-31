@@ -2,7 +2,6 @@
 @import "../../../../styles/variables";
 
 .hero{
-   margin-top: $s-unit;
    width:100%;
    @include flex-center;
    align-items: center;

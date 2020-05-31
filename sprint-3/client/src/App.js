@@ -8,16 +8,14 @@ import './App.scss';
 class App extends Component {
   render(){
     return ( 
-      <div className="App">
         <BrowserRouter>
-          <Header clickHandler={this.clickHandler}/>
+          <Header />
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/UploadPage" component={UploadPage} />
             <Route path="/:id" component={HomePage}/>
           </Switch>
         </BrowserRouter>
-      </div>
     );
   }
 }
