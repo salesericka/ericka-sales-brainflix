@@ -34,11 +34,11 @@ class UploadPage extends React.Component{
    axios
       .post(`${API_URL}/videos`,formInput)
       .then(response=>{
-         console.log("Video List Data",response.data)
+         // console.log("Video List Data",response.data)
          axios
             .post(`${API_URL}/videos/:videoId`,formInput)
             .then(results=>{
-               console.log(" MainVideo Data",results.data)
+               // console.log(" MainVideo Data",results.data)
             })
             .catch(err=>{
                console.log(err)

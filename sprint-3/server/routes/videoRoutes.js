@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const videoList=require('./data/videoList.json');
 const mainVideo=require("./data/mainVideo.json");
-const { v4: uuidv4 } = require('uuid');
 
 router.get('/',(req,res)=>{
    res.status(200).json(videoList);
@@ -40,8 +39,9 @@ router.post('/:videoId',(req,res)=>{
       channel,
       description
    } = req.body
-   mainVideo.push({
-      ...req.body,     
+   mainVideo.push(
+      {
+      ...req.body,
       views: "3",
       likes: "1,000,000",
       duration: "7:26",
@@ -63,7 +63,7 @@ router.post('/:videoId',(req,res)=>{
             timestamp: new Date()
          },
          {
-            "name": "Theodore Duncan",
+            name: "Theodore Duncan",
             comment: "DOOOOOOOGGG!!!",
             id: "993f950f-df99-48e7-bd1e-d95003cc98f1",
             likes: 0,
