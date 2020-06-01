@@ -2,41 +2,57 @@ import React from 'react';
 import defaultImg from '../../assets/images/upload-video-preview.jpg';
 import './UploadPage.scss';
 import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid';
+import {Link} from 'react-router-dom';
 
 const API_URL = process.env.REACT_APP_API_URL;
 
 class UploadPage extends React.Component{
 
-  state={
+   state={
      title: "",
      description: "",
-  }
-  handleInputChange = (e) =>{
+   }
+
+   handleInputChange = (e) =>{
    this.setState({
       [e.target.name]:e.target.value
    })}
 
-  addVideo = (e) => {
+
+   addVideo = (e) => {
    e.preventDefault();
 
    let formInput ={
+      id:uuidv4(),
       title:e.target.title.value,
       description:e.target.description.value,
-      image:"https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1320&q=80",
+      image:"https://i.imgur.com/JYZVnu0.jpg",
       channel:"Doggo"
    }
 
    axios
       .post(`${API_URL}/videos`,formInput)
       .then(response=>{
-         
+         console.log("Video List Data",response.data)
+         axios
+            .post(`${API_URL}/videos/:videoId`,formInput)
+            .then(results=>{
+               console.log(" MainVideo Data",results.data)
+            })
+            .catch(err=>{
+               console.log(err)
+            })
+      })
+      .catch(err=>{
+         console.log(err)
       })
       this.setState({
          title:e.target.title.placeholder,
          description:e.target.description.placeholder
       })
-   }
 
+   }
 
    render (){
       return(
@@ -51,7 +67,12 @@ class UploadPage extends React.Component{
                      <label className="upload-video__label-img">
                         Video thumbnail
                      </label>
-                     <input type="image" id="image" alt="upload image"  src={defaultImg} className="upload-video__input-img">
+                     <input type="image" 
+                        name="image"
+                        id="image" 
+                        alt="upload image"
+                        src={defaultImg}   
+                        accept= "image/png, image/jpeg" className="upload-video__input-img">
                      </input>
                   </div>
                   <div className="upload-video__box-detail">
@@ -85,9 +106,11 @@ class UploadPage extends React.Component{
                   <button type="submit" className="upload-video__btn-publish">
                      Publish
                   </button>
-                  <button className="upload-video__btn-cancel">
-                     Cancel
-                  </button>
+                  <Link to="/" className="upload-video__link">
+                     <button className="upload-video__btn-cancel" >
+                        Cancel
+                     </button>
+                  </Link>
                </div>
             </form>
          </div>

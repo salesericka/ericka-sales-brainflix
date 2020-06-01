@@ -107,7 +107,9 @@
       @include button-format;
       max-width:21.875rem;
    }
-
+   &__link {
+     width:100%;
+   }
    &__btn-cancel{
       max-width:350px;
       margin:$s-unit 0;
