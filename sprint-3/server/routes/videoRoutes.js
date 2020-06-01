@@ -29,8 +29,6 @@ router.post ('/',(req,res)=>{
    ])
 })
 
-
-
 router.post('/:videoId',(req,res)=>{
    const {
       id,
@@ -49,21 +47,21 @@ router.post('/:videoId',(req,res)=>{
       timestamp: new Date(),
       comments:[
          {
-            name: "Micheal Lyons",
+            name: "Dog Lover",
             comment: "Cute Dog",
             id: "1ab6d9f6-da38-456e-9b09-ab0acd9ce818",
             likes: 0,
             timestamp: new Date()
          },
          {
-            name: "Gary Wong",
+            name: "Dog Lover3000",
             comment: "I want that dog",
             id: "cc6f173d-9e9d-4501-918d-bc11f15a8e14",
             likes: 0,
             timestamp: new Date()
          },
          {
-            name: "Theodore Duncan",
+            name: "Random Person",
             comment: "DOOOOOOOGGG!!!",
             id: "993f950f-df99-48e7-bd1e-d95003cc98f1",
             likes: 0,

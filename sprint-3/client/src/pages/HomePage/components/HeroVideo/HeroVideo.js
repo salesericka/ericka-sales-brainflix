@@ -5,11 +5,10 @@ import btnVolume from '../../../../assets/icons/svg/Icon-volume.svg';
 import './HeroVideo.scss';
 
 function HeroVideo (props){
-
    return ( 
       <div className="hero">
          <div className="hero-video__container">            
-            <video className="hero-video"  poster={props.mainVideo.image}>
+            <video className="hero-video" poster={props.mainVideo.image}>
                <source src={props.mainVideo.video}/> 
             </video>
             <div className="hero-video__setting">
@@ -36,6 +35,5 @@ function HeroVideo (props){
       </div>
    );
 }
-
 
 export default HeroVideo;

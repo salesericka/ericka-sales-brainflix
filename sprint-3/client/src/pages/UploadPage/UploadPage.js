@@ -19,7 +19,6 @@ class UploadPage extends React.Component{
       [e.target.name]:e.target.value
    })}
 
-
    addVideo = (e) => {
    e.preventDefault();
 
@@ -51,7 +50,6 @@ class UploadPage extends React.Component{
          title:e.target.title.placeholder,
          description:e.target.description.placeholder
       })
-
    }
 
    render (){
@@ -60,7 +58,6 @@ class UploadPage extends React.Component{
             <h1 className="upload-video__title">
                Upload Video
             </h1>
-   
             <form action="" className="upload-video__form" method="post" onSubmit={this.addVideo}>
                <div className="upload-video__border-wrapper">
                   <div className="upload-video__box-img">
@@ -116,7 +113,6 @@ class UploadPage extends React.Component{
          </div>
       )
    }
-
 }
 
 export default UploadPage;
